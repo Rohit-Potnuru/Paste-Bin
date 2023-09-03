@@ -16,6 +16,8 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- SDK version picked up from archetype version.-->
+        <aws.java.sdk.version>2.20.43</aws.java.sdk.version>
     </properties>
 
 </project>
