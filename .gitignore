@@ -31,6 +31,8 @@ buildNumber.properties
 *.iws
 *.iml
 *.ipr
+.idea/*
+*/.idea
 
 ### Eclipse ###
 .apt_generated
