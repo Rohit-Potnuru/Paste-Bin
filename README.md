@@ -9,7 +9,10 @@ Paste Bin System Overview
 Get PasteBinData Service
 
 # PasteBinServiceCDK
-To deploy changes using CDK, please follow the below steps. 
+Repository Link to CDK Application: https://github.com/Rohit-Potnuru/PasteBinServiceCDK
+
+### Deployment procedure for a CDK application.
+To deploy changes using CDK, please follow the below steps.
 1. Create an AWS Profile in your local using AWS CLI.
    * `aws configure --profile <profile-name>`
 2. Verify AWS CLI Configuration
