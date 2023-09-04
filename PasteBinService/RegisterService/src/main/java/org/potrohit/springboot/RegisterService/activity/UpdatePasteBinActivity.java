@@ -15,9 +15,6 @@ public class UpdatePasteBinActivity {
 
     @RequestMapping(value = RequestMappings.REGISTER, method = RequestMethod.POST)
     public @ResponseBody PasteBinResponse registerPasteBin(@RequestBody RegisterPasteBinRequest registerPasteBinRequest) {
-
         return updatePasteBinService.registerPasteBin(registerPasteBinRequest);
     }
-
-
 }
