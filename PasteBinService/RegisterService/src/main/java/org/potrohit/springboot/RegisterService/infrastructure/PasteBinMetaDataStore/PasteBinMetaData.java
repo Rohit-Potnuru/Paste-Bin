@@ -1,4 +1,4 @@
-package org.potrohit.springboot.RegisterService.domain.vao;
+package org.potrohit.springboot.RegisterService.infrastructure.PasteBinMetaDataStore;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -13,7 +13,7 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSortK
 @EqualsAndHashCode
 @Setter
 @Getter
-public class PasteBinMetaDataStoreVao {
+public class PasteBinMetaData {
     private String pasteBinId;
     private String userId;
     private String s3Bucket;
