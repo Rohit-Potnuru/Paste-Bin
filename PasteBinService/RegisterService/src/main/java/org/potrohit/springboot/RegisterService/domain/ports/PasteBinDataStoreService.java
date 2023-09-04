@@ -1,4 +1,4 @@
-package org.potrohit.springboot.RegisterService.domain.ports.PasteBinDataStore;
+package org.potrohit.springboot.RegisterService.domain.ports;
 
 public interface PasteBinDataStoreService {
     //Generate S3Object
