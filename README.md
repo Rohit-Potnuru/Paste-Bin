@@ -15,7 +15,9 @@ Get Apis:
    Response:
 ```
    {
-      S3_URL:
+      file_name:
+      pasteBin_id:
+      pasteBin_S3_url:
    }
 ```
 
@@ -27,11 +29,13 @@ Get Apis:
    [
       {
          file_name:
-         S3_URL:
+         pasteBin_id:
+         pasteBin_S3_url:
       },
       {
          file_name:
-         S3_URL:
+         pasteBin_id:
+         pasteBin_S3_url:
       },
    ]
 ```
@@ -48,22 +52,8 @@ Register APIs
    Response:
    ```
    {
-      S3:URL
-      PasteBinId:
-   }
-   ```
-2. ```/confirm```
-   Request Body:
-   ```
-   {
-      userId:    (not Required)
-      PasteBinId: (Required)
-   }
-   ```
-   Response:
-   ```
-   {
-      PasteBinId:
+      pasteBin_id:
+      pasteBin_S3_url:
    }
    ```
 
@@ -80,8 +70,8 @@ Update APIs
    Response:
    ```
    {
-      S3:URL
-      PasteBinId:
+      pasteBin_id:
+      pasteBin_S3_url:
    }
    ```
 
@@ -97,7 +87,8 @@ Other APIs
     Response:
     ```
     {
-       PasteBinId:
+      pasteBin_id:
+      pasteBin_S3_url:
     }
     ```
 
