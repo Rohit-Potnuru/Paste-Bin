@@ -4,8 +4,10 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbPartitionKey;
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSecondaryPartitionKey;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSortKey;
 
 @DynamoDbBean
@@ -13,7 +15,7 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSortK
 @EqualsAndHashCode
 @Setter
 @Getter
-public class PasteBinMetaData {
+public class PasteBinMetaData implements Comparable<PasteBinMetaData> {
     private String pasteBinId;
     private String userId;
     private String s3Bucket;
@@ -27,5 +29,11 @@ public class PasteBinMetaData {
     public String getPasteBinId() { return this.pasteBinId; }
 
     @DynamoDbSortKey
+    @DynamoDbSecondaryPartitionKey(indexNames = "PasteBinIdsByUserId")
     public String getUserId() { return this.userId; }
+
+    @Override
+    public int compareTo(PasteBinMetaData metaData) {
+        return this.pasteBinId.compareTo(metaData.pasteBinId);
+    }
 }

@@ -4,7 +4,9 @@ import org.potrohit.springboot.RegisterService.activity.common.ConfirmPasteBinRe
 import org.potrohit.springboot.RegisterService.activity.common.RegisterPasteBinRequest;
 import org.potrohit.springboot.RegisterService.activity.common.ModifyPasteBinRequest;
 import org.potrohit.springboot.RegisterService.activity.common.PasteBinResponse;
+import org.springframework.stereotype.Component;
 
+@Component
 public class UpdatePasteBinServiceImpl implements UpdatePasteBinService{
     @Override
     public PasteBinResponse registerPasteBin(RegisterPasteBinRequest registerPasteBinRequest) {
