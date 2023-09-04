@@ -7,8 +7,7 @@ import org.springframework.stereotype.Component;
 
 @RequiredArgsConstructor
 @Component
-public class PasteBinMetaDataStoreImpl implements PasteBinMetaDataStore {
-
+public class PasteBinMetaDataStoreAdapterImpl implements PasteBinMetaDataStore {
     @Autowired
     private final DynamoDbImpl dynamoDb;
 }
