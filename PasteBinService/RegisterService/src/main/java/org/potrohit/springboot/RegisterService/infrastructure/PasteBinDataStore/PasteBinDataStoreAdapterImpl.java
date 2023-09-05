@@ -1,4 +1,4 @@
-package org.potrohit.springboot.RegisterService.infrastructure.PasteBinDataStoreNew;
+package org.potrohit.springboot.RegisterService.infrastructure.PasteBinDataStore;
 
 import lombok.RequiredArgsConstructor;
 import org.potrohit.springboot.RegisterService.domain.ports.PasteBinDataStore;
@@ -9,17 +9,16 @@ import org.potrohit.springboot.RegisterService.infrastructure.s3.S3Details;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@RequiredArgsConstructor
 @Component
 public class PasteBinDataStoreAdapterImpl implements PasteBinDataStore {
     @Autowired
-    private final DynamoDbImpl dynamoDb;
+    private final DynamoDbImpl dynamoDb = null;
     @Autowired
-    private final S3AdapterImpl s3Impl;
+    private final S3AdapterImpl s3AdapterImpl = null;
 
     @Override
     public String registerPasteBin(final PasteBinVao pasteBinVao) {
-        final S3Details details = s3Impl.getS3Details(pasteBinVao);
+        final S3Details details = s3AdapterImpl.getS3Details(pasteBinVao);
 
         // call s3Impl and get S3 details
         // create PasteBinMetaData object.

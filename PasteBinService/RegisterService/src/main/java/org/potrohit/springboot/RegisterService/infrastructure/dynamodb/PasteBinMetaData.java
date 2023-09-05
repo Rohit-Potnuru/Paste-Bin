@@ -19,7 +19,8 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSortK
 public class PasteBinMetaData implements Comparable<PasteBinMetaData> {
     private String pasteBinId;
     private String userId;
-    private S3Details storageDetails;
+    private String s3Bucket;
+    private String s3Key;
     private Long creationDate;
     private String itemStatus;
     private Boolean isActive;

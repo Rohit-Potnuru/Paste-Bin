@@ -15,12 +15,11 @@ import software.amazon.awssdk.enhanced.dynamodb.model.QueryEnhancedRequest;
 /**
  * This class implements the crud operations for Dynamodb.
  */
-@RequiredArgsConstructor
 @Log4j2
 @Component
 public class DynamoDbImpl {
     @Autowired
-    private final DynamoDbTable<PasteBinMetaData> pasteBinMetaDataTable;
+    private final DynamoDbTable<PasteBinMetaData> pasteBinMetaDataTable = null;
 
     public PasteBinMetaData getItem(final Key primaryKey) {
         try {

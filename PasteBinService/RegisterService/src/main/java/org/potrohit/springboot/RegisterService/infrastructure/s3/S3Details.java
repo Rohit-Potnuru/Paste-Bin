@@ -8,5 +8,5 @@ import lombok.Data;
 @Builder
 public class S3Details {
     String s3Bucket;
-    String s3Key;
+    String s3ObjectKey;
 }
