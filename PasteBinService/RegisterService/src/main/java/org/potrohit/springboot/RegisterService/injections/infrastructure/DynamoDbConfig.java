@@ -1,6 +1,6 @@
 package org.potrohit.springboot.RegisterService.injections.infrastructure;
 
-import org.potrohit.springboot.RegisterService.infrastructure.PasteBinMetaDataStore.PasteBinMetaData;
+import org.potrohit.springboot.RegisterService.infrastructure.dynamodb.PasteBinMetaData;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import software.amazon.awssdk.auth.credentials.ProfileCredentialsProvider;

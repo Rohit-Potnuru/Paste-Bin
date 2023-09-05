@@ -1,4 +1,4 @@
-package org.potrohit.springboot.RegisterService.infrastructure.PasteBinMetaDataStore;
+package org.potrohit.springboot.RegisterService.infrastructure.dynamodb;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
