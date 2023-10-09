@@ -52,7 +52,7 @@
         <!--DynamoDb -->
         <dependency>
             <groupId>software.amazon.awssdk</groupId>
-            <artifactId>dynamodb</artifactId>
+            <artifactId>dynamodb-enhanced</artifactId>
         </dependency>
 
         <!-- secretsmanager -->
@@ -67,5 +67,17 @@
         </dependency>
 
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <imageName>getpastebinservice</imageName> <!-- This configuration is now inside the plugin and is lowercase -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
